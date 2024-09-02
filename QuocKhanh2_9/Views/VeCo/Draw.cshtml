@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Draw Flag";
+}
+
+<h2>Draw Flag</h2>
+
+@if (ViewBag.ImageData != null)
+{
+    <img src="data:image/png;base64,@ViewBag.ImageData" alt="Generated Flag" />
+}
+else
+{
+    <p>Unable to load the image.</p>
+}

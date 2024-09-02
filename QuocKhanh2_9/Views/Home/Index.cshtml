@@ -1,0 +1,21 @@
+﻿<body style="background-image: url('https://i.pinimg.com/originals/f5/bc/df/f5bcdf09dbf254facf2f0ed12efe8190.jpg')">
+    @{
+        ViewBag.Title = "Draw Flag";
+    }
+
+    <h2>Draw Flag</h2>
+
+    <form asp-action="Draw" asp-controller="VeCo" method="post">
+        <button type="submit">Generate Flag</button>
+    </form>
+
+    @if (ViewBag.ImageData != null)
+    {
+        <img src="data:image/png;base64,@ViewBag.ImageData" alt="Generated Flag" />
+    }
+    else
+    {
+        <p>Click the button above to generate the flag image.</p>
+    }
+
+</body>
